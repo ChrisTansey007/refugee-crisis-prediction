@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "repo_name",
+    "template_name",
+    "mode",
+    "current_phase",
+    "execution_mode",
+    "assignment_model",
+    "active_goal_file",
+    "assignment_state_file",
+    "capability_registry_file",
+    "active_task_count",
+    "last_updated",
+    "notes"
+  ],
+  "properties": {
+    "repo_name": { "type": "string", "minLength": 1 },
+    "template_name": { "type": "string", "minLength": 1 },
+    "mode": { "type": "string", "enum": ["template", "fork", "idle"] },
+    "current_phase": { "type": "string", "minLength": 1 },
+    "execution_mode": { "type": "string", "enum": ["solo", "multi-worker", "hybrid"] },
+    "assignment_model": { "type": "string", "minLength": 1 },
+    "active_goal_file": { "type": "string", "minLength": 1 },
+    "assignment_state_file": { "type": "string", "minLength": 1 },
+    "capability_registry_file": { "type": "string", "minLength": 1 },
+    "active_task_count": { "type": "integer", "minimum": 0 },
+    "last_updated": { "type": "string", "minLength": 1 },
+    "notes": { "type": "string" }
+  },
+  "additionalProperties": true
+}

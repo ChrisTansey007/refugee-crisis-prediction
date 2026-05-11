@@ -1,0 +1,24 @@
+{
+  "description": "Dependency map for tasks in the ROWS system. Tracks which tasks depend on which other tasks.",
+  "schema": {
+    "task_id": "string — the dependent task",
+    "depends_on": [
+      "array of task IDs this task depends on"
+    ],
+    "blocked_by": [
+      "array of task IDs currently blocking this task"
+    ],
+    "blocks": [
+      "array of task IDs this task blocks"
+    ]
+  },
+  "dependencies": [
+    {
+      "task_id": "TASK-0001",
+      "depends_on": [],
+      "blocked_by": [],
+      "blocks": []
+    }
+  ],
+  "last_updated": "2026-05-09T15:31:26.850Z"
+}

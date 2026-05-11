@@ -1,0 +1,50 @@
+{
+  "version": 1,
+  "default_tier": "mid",
+  "tiers": {
+    "frontier": {
+      "description": "Highest-capability models for difficult reasoning, architecture, and high-stakes review.",
+      "use_for": [
+        "system design",
+        "hard debugging",
+        "cross-file reasoning",
+        "final review on risky changes"
+      ],
+      "fallback": ["mid", "fast", "local"],
+      "cost_ceiling": "high"
+    },
+    "mid": {
+      "description": "Balanced models for most implementation, analysis, and documentation work.",
+      "use_for": [
+        "feature implementation",
+        "doc synthesis",
+        "routine code review",
+        "task decomposition"
+      ],
+      "fallback": ["fast", "local"],
+      "cost_ceiling": "moderate"
+    },
+    "fast": {
+      "description": "Low-latency models for small edits, summaries, and mechanical changes.",
+      "use_for": [
+        "small doc edits",
+        "formatting support",
+        "simple classification",
+        "status summaries"
+      ],
+      "fallback": ["local"],
+      "cost_ceiling": "low"
+    },
+    "local": {
+      "description": "Offline or tightly scoped execution for secrets, private context, or deterministic tasks.",
+      "use_for": [
+        "secret-sensitive work",
+        "local scripts",
+        "repository validation",
+        "deterministic transformations"
+      ],
+      "fallback": [],
+      "cost_ceiling": "low"
+    }
+  }
+}

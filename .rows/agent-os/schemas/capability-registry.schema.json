@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": ["description", "capabilities", "last_updated"],
+  "properties": {
+    "description": { "type": "string", "minLength": 1 },
+    "capabilities": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "required": ["description", "preferred_workers", "common_roles", "evidence_expected"],
+        "properties": {
+          "description": { "type": "string", "minLength": 1 },
+          "preferred_workers": { "type": "array", "items": { "type": "string" } },
+          "common_roles": { "type": "array", "items": { "type": "string" } },
+          "evidence_expected": { "type": "string", "minLength": 1 }
+        },
+        "additionalProperties": true
+      }
+    },
+    "last_updated": { "type": "string", "minLength": 1 }
+  },
+  "additionalProperties": true
+}

@@ -1,0 +1,13 @@
+{
+  "name": "existing-project",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "rows:audit": "node .rows/scripts/audit-agent-os.mjs",
+    "rows:validate": "node .rows/scripts/validate-json.mjs && node .rows/scripts/validate-task.mjs && node .rows/scripts/validate-handoff.mjs && node .rows/scripts/validate-assignments.mjs && node .rows/scripts/validate-decisions.mjs && node .rows/scripts/validate-links.mjs && node .rows/scripts/validate-placeholders.mjs && node .rows/scripts/validate-locks.mjs && node .rows/scripts/validate-mcp.mjs && node .rows/scripts/validate-provider-tiers.mjs && node .rows/scripts/validate-secrets.mjs && node .rows/scripts/check-scope.mjs && node .rows/scripts/lint-markdown.mjs && node .rows/scripts/validate-state-consistency.mjs && node .rows/scripts/validate-startup-consistency.mjs",
+    "rows:graph": "node .rows/scripts/build-knowledge-graph.mjs",
+    "rows:distill": "node .rows/scripts/distill-handoffs.mjs",
+    "rows:status": "node .rows/scripts/generate-status-report.mjs",
+    "rows:list:tasks": "node .rows/scripts/list-tasks.mjs"
+  }
+}

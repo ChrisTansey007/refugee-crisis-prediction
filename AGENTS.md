@@ -194,3 +194,21 @@ Docs
 ---
 
 This playbook equips AI assistants and junior developers to collaborate effectively, safely, and consistently across all phases of the Migration Forecasting System.
+
+<!-- ROWS:START -->
+# ROWS Overlay
+
+This repository uses ROWS as a namespaced overlay under `.rows/`.
+
+Before acting, every AI worker must read:
+
+1. `.rows/agent-os/BOOTSTRAP.md`
+2. `.rows/AGENTS.md`
+3. `PROJECT_GOAL.md`
+4. `PROJECT_CONTEXT.md`
+5. `.rows/agent-os/startup-sequence.md`
+
+The existing project remains the source of truth for application code, build commands, deployment, and domain behavior. ROWS governs task intake, worker coordination, handoffs, locks, verification evidence, and completion rules.
+
+Project-specific instructions outside this managed ROWS section still apply unless they conflict with the ROWS worker contract or the human owner explicitly overrides them.
+<!-- ROWS:END -->

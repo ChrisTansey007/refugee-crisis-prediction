@@ -1,0 +1,27 @@
+{
+  "description": "Machine-readable decision register. Source of truth for docs/05-decisions/decision-register.md.",
+  "decisions": [
+    {
+      "adr": "ADR-0001",
+      "title": "Repo-Orchestrated Worker System",
+      "status": "accepted",
+      "date": "2026-05-06",
+      "file": "docs/02-architecture/decisions/ADR-0001-repo-orchestrated-worker-system.md"
+    },
+    {
+      "adr": "ADR-0002",
+      "title": "Template Fork Workflow",
+      "status": "accepted",
+      "date": "2026-05-06",
+      "file": "docs/02-architecture/decisions/ADR-0002-template-fork-workflow.md"
+    },
+    {
+      "adr": "ADR-0003",
+      "title": "Flexible Worker Assignment Model",
+      "status": "accepted",
+      "date": "2026-05-06",
+      "file": "docs/02-architecture/decisions/ADR-0003-flexible-worker-assignment.md"
+    }
+  ],
+  "last_updated": "2026-05-06T13:50:00-04:00"
+}

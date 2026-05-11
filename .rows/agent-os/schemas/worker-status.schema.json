@@ -1,0 +1,100 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": ["workers", "last_updated"],
+  "properties": {
+    "workers": {
+      "type": "object",
+      "required": ["codex", "claude", "gemini", "windsurf", "antigravity", "hermes"],
+      "properties": {
+        "codex": {
+          "type": "object",
+          "required": ["status", "current_task", "active_roles", "best_for", "unavailable_for", "last_handoff", "notes"],
+          "properties": {
+            "status": { "type": "string" },
+            "current_task": { "type": ["string", "null"] },
+            "active_roles": { "type": "array", "items": { "type": "string" } },
+            "best_for": { "type": "string" },
+            "unavailable_for": { "type": "array", "items": { "type": "string" } },
+            "last_handoff": { "type": ["string", "null"] },
+            "notes": { "type": "string" }
+          },
+          "additionalProperties": true
+        },
+        "claude": {
+          "type": "object",
+          "required": ["status", "current_task", "active_roles", "best_for", "unavailable_for", "last_handoff", "notes"],
+          "properties": {
+            "status": { "type": "string" },
+            "current_task": { "type": ["string", "null"] },
+            "active_roles": { "type": "array", "items": { "type": "string" } },
+            "best_for": { "type": "string" },
+            "unavailable_for": { "type": "array", "items": { "type": "string" } },
+            "last_handoff": { "type": ["string", "null"] },
+            "notes": { "type": "string" }
+          },
+          "additionalProperties": true
+        },
+        "gemini": {
+          "type": "object",
+          "required": ["status", "current_task", "active_roles", "best_for", "unavailable_for", "last_handoff", "notes"],
+          "properties": {
+            "status": { "type": "string" },
+            "current_task": { "type": ["string", "null"] },
+            "active_roles": { "type": "array", "items": { "type": "string" } },
+            "best_for": { "type": "string" },
+            "unavailable_for": { "type": "array", "items": { "type": "string" } },
+            "last_handoff": { "type": ["string", "null"] },
+            "notes": { "type": "string" }
+          },
+          "additionalProperties": true
+        },
+        "windsurf": {
+          "type": "object",
+          "required": ["status", "current_task", "active_roles", "best_for", "unavailable_for", "last_handoff", "notes"],
+          "properties": {
+            "status": { "type": "string" },
+            "current_task": { "type": ["string", "null"] },
+            "active_roles": { "type": "array", "items": { "type": "string" } },
+            "best_for": { "type": "string" },
+            "unavailable_for": { "type": "array", "items": { "type": "string" } },
+            "last_handoff": { "type": ["string", "null"] },
+            "notes": { "type": "string" }
+          },
+          "additionalProperties": true
+        },
+        "antigravity": {
+          "type": "object",
+          "required": ["status", "current_task", "active_roles", "best_for", "unavailable_for", "last_handoff", "notes"],
+          "properties": {
+            "status": { "type": "string" },
+            "current_task": { "type": ["string", "null"] },
+            "active_roles": { "type": "array", "items": { "type": "string" } },
+            "best_for": { "type": "string" },
+            "unavailable_for": { "type": "array", "items": { "type": "string" } },
+            "last_handoff": { "type": ["string", "null"] },
+            "notes": { "type": "string" }
+          },
+          "additionalProperties": true
+        },
+        "hermes": {
+          "type": "object",
+          "required": ["status", "current_task", "active_roles", "best_for", "unavailable_for", "last_handoff", "notes"],
+          "properties": {
+            "status": { "type": "string" },
+            "current_task": { "type": ["string", "null"] },
+            "active_roles": { "type": "array", "items": { "type": "string" } },
+            "best_for": { "type": "string" },
+            "unavailable_for": { "type": "array", "items": { "type": "string" } },
+            "last_handoff": { "type": ["string", "null"] },
+            "notes": { "type": "string" }
+          },
+          "additionalProperties": true
+        }
+      },
+      "additionalProperties": true
+    },
+    "last_updated": { "type": "string", "minLength": 1 }
+  },
+  "additionalProperties": true
+}

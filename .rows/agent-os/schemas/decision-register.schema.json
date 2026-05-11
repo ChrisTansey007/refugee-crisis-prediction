@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": ["description", "decisions", "last_updated"],
+  "properties": {
+    "description": { "type": "string", "minLength": 1 },
+    "decisions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["adr", "title", "status", "date", "file"],
+        "properties": {
+          "adr": { "type": "string", "pattern": "^(ADR|BLOCKER)-[A-Z0-9-]+$" },
+          "title": { "type": "string", "minLength": 1 },
+          "status": { "type": "string" },
+          "date": { "type": "string", "minLength": 1 },
+          "file": { "type": "string", "minLength": 1 }
+        },
+        "additionalProperties": true
+      }
+    },
+    "last_updated": { "type": "string", "minLength": 1 }
+  },
+  "additionalProperties": true
+}

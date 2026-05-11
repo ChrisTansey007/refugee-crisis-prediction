@@ -1,0 +1,13 @@
+{
+  "task_id": "TASK-XXXX",
+  "claimed_by": "[worker-name]",
+  "claimed_at": "YYYY-MM-DDTHH:MM:SS",
+  "branch": "agent/[worker]/[task-id]-short-description",
+  "status": "active",
+  "files_expected": [
+    "path/to/file1",
+    "path/to/file2"
+  ],
+  "expires_at": "YYYY-MM-DDTHH:MM:SS",
+  "notes": "Brief description of what this lock covers."
+}

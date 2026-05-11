@@ -1,0 +1,106 @@
+{
+  "description": "Risk register for the ROWS system. Tracks risks relevant to multi-agent development.",
+  "risks": [
+    {
+      "id": "RISK-001",
+      "title": "Duplicate work",
+      "description": "Two workers may claim overlapping tasks or modify the same files.",
+      "likelihood": "medium",
+      "impact": "medium",
+      "mitigation": "Advisory locks in agent-os/locks/. Workers check locks before claiming.",
+      "status": "monitored",
+      "identified": "2026-05-06"
+    },
+    {
+      "id": "RISK-002",
+      "title": "Stale handoff",
+      "description": "A worker fails to write a handoff, losing session context.",
+      "likelihood": "medium",
+      "impact": "high",
+      "mitigation": "Handoff requirement in worker contract. CI checks for handoff presence.",
+      "status": "monitored",
+      "identified": "2026-05-06"
+    },
+    {
+      "id": "RISK-003",
+      "title": "Unclear goal",
+      "description": "PROJECT_GOAL.md is vague, causing workers to make incorrect assumptions.",
+      "likelihood": "high",
+      "impact": "high",
+      "mitigation": "Guided intake form in PROJECT_GOAL.md. Workers escalate ambiguity.",
+      "status": "monitored",
+      "identified": "2026-05-06"
+    },
+    {
+      "id": "RISK-004",
+      "title": "Fake completion",
+      "description": "A worker marks a task done without actually completing it or without verification.",
+      "likelihood": "medium",
+      "impact": "critical",
+      "mitigation": "No worker can self-close. Independent verification required. Definition of done gates.",
+      "status": "monitored",
+      "identified": "2026-05-06"
+    },
+    {
+      "id": "RISK-005",
+      "title": "File collision",
+      "description": "Two workers modify the same file causing merge conflicts.",
+      "likelihood": "medium",
+      "impact": "medium",
+      "mitigation": "Advisory locks declare expected files. Small, focused tasks reduce collision surface.",
+      "status": "monitored",
+      "identified": "2026-05-06"
+    },
+    {
+      "id": "RISK-006",
+      "title": "Over-reliance on one worker",
+      "description": "A project becomes dependent on a single AI tool, creating a bottleneck if that tool is unavailable.",
+      "likelihood": "medium",
+      "impact": "high",
+      "mitigation": "Worker replaceability rule. Handoffs enable any worker to continue. Capability-based routing.",
+      "status": "monitored",
+      "identified": "2026-05-06"
+    },
+    {
+      "id": "RISK-007",
+      "title": "Private-memory dependency",
+      "description": "A task depends on context stored only in a specific AI's chat memory, making reassignment impossible.",
+      "likelihood": "high",
+      "impact": "critical",
+      "mitigation": "Private memory ban. All context must be in repo files. Handoffs required before reassignment.",
+      "status": "monitored",
+      "identified": "2026-05-06"
+    },
+    {
+      "id": "RISK-008",
+      "title": "Stale reassignment",
+      "description": "A task is reassigned but the new worker never picks it up, or the reassignment record is lost.",
+      "likelihood": "low",
+      "impact": "high",
+      "mitigation": "Reassignment records in agent-os/reassignment/. Stale lock recovery policy. Human oversight.",
+      "status": "monitored",
+      "identified": "2026-05-06"
+    },
+    {
+      "id": "RISK-009",
+      "title": "Unverified solo-worker completion",
+      "description": "In solo mode, a worker self-approves work without independent verification.",
+      "likelihood": "medium",
+      "impact": "high",
+      "mitigation": "Solo workers must not self-close. Automated validation required. Human approval required.",
+      "status": "monitored",
+      "identified": "2026-05-06"
+    },
+    {
+      "id": "RISK-010",
+      "title": "Incorrect capability routing",
+      "description": "A task is routed to a worker that lacks the required capabilities.",
+      "likelihood": "medium",
+      "impact": "medium",
+      "mitigation": "Capability registry. Task template requires capability declarations. Workers self-check capability fit.",
+      "status": "monitored",
+      "identified": "2026-05-06"
+    }
+  ],
+  "last_updated": "2026-05-06T13:50:00-04:00"
+}

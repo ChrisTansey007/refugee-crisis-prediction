@@ -1,0 +1,62 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "ROWS Knowledge Graph",
+  "type": "object",
+  "required": ["generated_at", "node_count", "edge_count", "nodes", "edges", "orphan_summary"],
+  "properties": {
+    "generated_at": {
+      "type": "string"
+    },
+    "source_commit_hint": {
+      "type": "string"
+    },
+    "node_count": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "edge_count": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "nodes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "path", "kind", "label", "title"],
+        "properties": {
+          "id": { "type": "string" },
+          "path": { "type": "string" },
+          "kind": { "type": "string" },
+          "label": { "type": "string" },
+          "title": { "type": "string" }
+        }
+      }
+    },
+    "edges": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["source", "target", "type", "structural", "confidence"],
+        "properties": {
+          "source": { "type": "string" },
+          "target": { "type": "string" },
+          "type": { "type": "string" },
+          "structural": { "type": "boolean" },
+          "source_section": { "type": ["string", "null"] },
+          "target_kind": { "type": ["string", "null"] },
+          "confidence": { "type": "string" }
+        }
+      }
+    },
+    "orphan_summary": {
+      "type": "object",
+      "required": ["adrs", "skills", "handoffs", "all"],
+      "properties": {
+        "adrs": { "type": "array", "items": { "type": "string" } },
+        "skills": { "type": "array", "items": { "type": "string" } },
+        "handoffs": { "type": "array", "items": { "type": "string" } },
+        "all": { "type": "array", "items": { "type": "string" } }
+      }
+    }
+  }
+}

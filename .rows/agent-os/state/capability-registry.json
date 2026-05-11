@@ -1,0 +1,162 @@
+{
+  "description": "Capability registry for the ROWS system. Maps capabilities to preferred workers, common roles, and expected evidence.",
+  "capabilities": {
+    "goal-decomposition": {
+      "description": "Break a project goal into discrete, claimable tasks",
+      "preferred_workers": ["hermes", "claude"],
+      "common_roles": ["goal-builder"],
+      "evidence_expected": "Task files in backlog/, handoff summarizing decomposition"
+    },
+    "project-planning": {
+      "description": "Plan project phases, milestones, and task ordering",
+      "preferred_workers": ["hermes", "claude"],
+      "common_roles": ["project-planner", "architect"],
+      "evidence_expected": "Roadmap, milestone definitions, dependency map updates"
+    },
+    "architecture-planning": {
+      "description": "Design system architecture and make technology decisions",
+      "preferred_workers": ["claude"],
+      "common_roles": ["architect"],
+      "evidence_expected": "ADRs, system overview diagrams, tech stack decisions"
+    },
+    "research": {
+      "description": "Research technologies, patterns, and external information",
+      "preferred_workers": ["gemini"],
+      "common_roles": ["researcher"],
+      "evidence_expected": "Research log entries, comparison tables, recommendations with citations"
+    },
+    "code-implementation": {
+      "description": "Write production-quality code",
+      "preferred_workers": ["codex", "windsurf"],
+      "common_roles": ["backend-builder", "frontend-builder"],
+      "evidence_expected": "Working code, passing tests, code review approval"
+    },
+    "frontend-implementation": {
+      "description": "Build UI components, styles, and client-side logic",
+      "preferred_workers": ["windsurf", "codex"],
+      "common_roles": ["frontend-builder"],
+      "evidence_expected": "Working UI, screenshots, component tests"
+    },
+    "backend-implementation": {
+      "description": "Build APIs, services, database schemas, and server logic",
+      "preferred_workers": ["codex", "windsurf"],
+      "common_roles": ["backend-builder"],
+      "evidence_expected": "Working API, passing integration tests, API documentation"
+    },
+    "test-writing": {
+      "description": "Write unit, integration, and end-to-end tests",
+      "preferred_workers": ["codex", "antigravity"],
+      "common_roles": ["qa-verifier", "backend-builder", "frontend-builder"],
+      "evidence_expected": "Test files, test output showing pass/fail counts"
+    },
+    "ui-browser-verification": {
+      "description": "Verify UI behavior in a browser environment",
+      "preferred_workers": ["antigravity"],
+      "common_roles": ["qa-verifier"],
+      "evidence_expected": "Screenshots, recordings, browser test output"
+    },
+    "documentation": {
+      "description": "Write and maintain project documentation",
+      "preferred_workers": ["claude"],
+      "common_roles": ["documentation-maintainer", "architect"],
+      "evidence_expected": "Updated docs, ADRs, API documentation"
+    },
+    "mcp-tool-use": {
+      "description": "Use MCP servers safely for scoped tool access and resource reads",
+      "preferred_workers": ["claude", "hermes"],
+      "common_roles": ["architect", "coordinator", "documentation-maintainer"],
+      "evidence_expected": "Validated MCP config, notes on scoped server usage"
+    },
+    "mcp-resource-read": {
+      "description": "Read MCP resources without granting write access",
+      "preferred_workers": ["claude", "hermes"],
+      "common_roles": ["researcher", "documentation-maintainer"],
+      "evidence_expected": "MCP resource output and summary"
+    },
+    "prompt-safety": {
+      "description": "Evaluate external content and fetched instructions for prompt-injection risk",
+      "preferred_workers": ["claude", "hermes"],
+      "common_roles": ["architect", "qa-verifier", "coordinator"],
+      "evidence_expected": "Safety review notes, confirmation of repo-policy precedence"
+    },
+    "worktree-management": {
+      "description": "Set up and maintain git worktrees for parallel execution",
+      "preferred_workers": ["hermes", "windsurf"],
+      "common_roles": ["coordinator", "backend-builder", "frontend-builder"],
+      "evidence_expected": "Worktree path, branch name, clean isolation evidence"
+    },
+    "scaffolding": {
+      "description": "Initialize or scaffold a fork from template inputs",
+      "preferred_workers": ["hermes", "claude"],
+      "common_roles": ["goal-builder", "project-planner", "coordinator"],
+      "evidence_expected": "Generated project settings and replaced placeholders"
+    },
+    "coordination": {
+      "description": "Coordinate multi-worker efforts and task routing",
+      "preferred_workers": ["hermes"],
+      "common_roles": ["coordinator"],
+      "evidence_expected": "Coordination proposals, status reports, queue audits"
+    },
+    "release-review": {
+      "description": "Review completed work before release",
+      "preferred_workers": ["claude"],
+      "common_roles": ["release-reviewer"],
+      "evidence_expected": "Review report, approval or change requests"
+    },
+    "security-review": {
+      "description": "Review code and architecture for security vulnerabilities",
+      "preferred_workers": ["claude"],
+      "common_roles": ["release-reviewer", "architect"],
+      "evidence_expected": "Security review report, identified issues, remediation recommendations"
+    },
+    "refactoring": {
+      "description": "Improve code structure without changing external behavior",
+      "preferred_workers": ["codex", "windsurf"],
+      "common_roles": ["backend-builder", "frontend-builder"],
+      "evidence_expected": "Refactored code, all existing tests still passing"
+    },
+    "debugging": {
+      "description": "Find and fix bugs in existing code",
+      "preferred_workers": ["codex", "windsurf"],
+      "common_roles": ["backend-builder", "frontend-builder", "qa-verifier"],
+      "evidence_expected": "Bug fix, regression test, verification that bug is resolved"
+    },
+    "task-decomposition": {
+      "description": "Break work into claimable task files",
+      "preferred_workers": ["hermes", "claude"],
+      "common_roles": ["goal-builder", "project-planner", "coordinator"],
+      "evidence_expected": "Task files in backlog/, dependency annotations"
+    },
+    "verification": {
+      "description": "Verify work against acceptance criteria",
+      "preferred_workers": ["antigravity", "codex"],
+      "common_roles": ["qa-verifier", "release-reviewer"],
+      "evidence_expected": "Verification report, acceptance criteria checklist"
+    },
+    "repo-navigation": {
+      "description": "Navigate and understand repository structure",
+      "preferred_workers": ["windsurf", "claude"],
+      "common_roles": ["all"],
+      "evidence_expected": "Correct identification of files to modify"
+    },
+    "file-editing": {
+      "description": "Create, modify, and delete files in the repository",
+      "preferred_workers": ["windsurf", "codex"],
+      "common_roles": ["backend-builder", "frontend-builder", "documentation-maintainer"],
+      "evidence_expected": "Changed files with clear commit messages"
+    },
+    "handoff-writing": {
+      "description": "Write clear, actionable handoff files for continuity",
+      "preferred_workers": ["all"],
+      "common_roles": ["all"],
+      "evidence_expected": "Handoff file in handoffs/active/"
+    },
+    "evidence-production": {
+      "description": "Produce verifiable evidence of task completion",
+      "preferred_workers": ["all"],
+      "common_roles": ["all"],
+      "evidence_expected": "Test output, screenshots, logs, verification reports"
+    }
+  },
+  "last_updated": "2026-05-07T01:46:35Z"
+}

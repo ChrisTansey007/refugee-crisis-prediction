@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "mode",
+    "active_goal_builder",
+    "active_coordinator",
+    "active_workers",
+    "assignments",
+    "reassignment_policy",
+    "notes"
+  ],
+  "properties": {
+    "mode": { "type": "string", "enum": ["solo", "multi-worker", "hybrid"] },
+    "active_goal_builder": { "type": ["string", "null"] },
+    "active_coordinator": { "type": ["string", "null"] },
+    "active_workers": { "type": "array", "items": { "type": "string" } },
+    "assignments": { "type": "array", "items": { "type": "object" } },
+    "reassignment_policy": {
+      "type": "object",
+      "required": [
+        "allow_reassignment",
+        "require_handoff_before_reassignment",
+        "allow_human_override",
+        "allow_stale_lock_recovery",
+        "require_new_lock_after_reassignment"
+      ],
+      "properties": {
+        "allow_reassignment": { "type": "boolean" },
+        "require_handoff_before_reassignment": { "type": "boolean" },
+        "allow_human_override": { "type": "boolean" },
+        "allow_stale_lock_recovery": { "type": "boolean" },
+        "require_new_lock_after_reassignment": { "type": "boolean" }
+      },
+      "additionalProperties": true
+    },
+    "notes": { "type": "array", "items": { "type": "string" } }
+  },
+  "additionalProperties": true
+}

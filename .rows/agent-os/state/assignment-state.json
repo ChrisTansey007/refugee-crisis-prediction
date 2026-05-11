@@ -1,0 +1,18 @@
+{
+  "mode": "solo",
+  "assignments": [],
+  "active_goal_builder": null,
+  "reassignment_policy": {
+    "allow_stale_lock_recovery": true,
+    "allow_human_override": true,
+    "allow_reassignment": true,
+    "require_new_lock_after_reassignment": true,
+    "require_handoff_before_reassignment": true
+  },
+  "active_workers": [],
+  "active_coordinator": null,
+  "notes": [
+    "Template default — no workers assigned yet.",
+    "Fill PROJECT_GOAL.md, then assign workers before starting."
+  ]
+}

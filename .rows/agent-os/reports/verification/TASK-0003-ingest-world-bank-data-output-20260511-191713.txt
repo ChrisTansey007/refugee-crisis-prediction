@@ -1,0 +1,12 @@
+STDOUT:
+Error during World Bank ingestion: No module named 'sqlalchemy'
+
+STDERR:
+Traceback (most recent call last):
+  File "/home/theca/hermes-agent/refugee-crisis-prediction/ingest_worldbank.py", line 18, in ingest_worldbank_data
+    from app.services.ingest_service import IngestService
+  File "/home/theca/hermes-agent/refugee-crisis-prediction/backend/app/services/ingest_service.py", line 6, in <module>
+    from sqlalchemy.ext.asyncio import AsyncSession
+ModuleNotFoundError: No module named 'sqlalchemy'
+
+Return code: 1

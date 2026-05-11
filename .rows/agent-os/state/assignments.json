@@ -1,0 +1,12 @@
+{
+  "task_assignments": {
+    "TASK-0005-ingest-nasa-power-data.md": {
+      "worker": "hermes-worker",
+      "claimed_at": "2026-05-11T19:30:11.082260Z",
+      "role": "Data Engineer",
+      "status": "claimed",
+      "notes": "Claimed by Hermes worker for NASA POWER climate data ingestion implementation"
+    }
+  },
+  "last_updated": "2026-05-11T19:30:11.082283Z"
+}

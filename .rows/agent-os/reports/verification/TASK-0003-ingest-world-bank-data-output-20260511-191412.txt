@@ -1,0 +1,9 @@
+STDOUT:
+
+STDERR:
+  File "/home/theca/hermes-agent/refugee-crisis-prediction/ingest_worldbank.py", line 48
+    print(f"
+          ^
+SyntaxError: unterminated string literal (detected at line 48)
+
+Return code: 1

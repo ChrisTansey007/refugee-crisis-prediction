@@ -1,0 +1,17 @@
+{
+  "task_id": "TASK-0009",
+  "claimed_by": "hermes-agent",
+  "claimed_at": "2026-05-11T20:22:34.914353",
+  "branch": "agent/hermes-agent/TASK-0009-develop-frontend-dashboard",
+  "status": "active",
+  "files_expected": [
+    "frontend/src/pages/Dashboard.jsx",
+    "frontend/src/components/dashboard/",
+    "frontend/src/components/map/",
+    "frontend/src/components/charts/",
+    "frontend/src/components/controls/",
+    "frontend/src/App.js (routes)"
+  ],
+  "expires_at": "2026-05-11T22:22:34.914366",
+  "notes": "Develop interactive frontend dashboard with React TypeScript"
+}

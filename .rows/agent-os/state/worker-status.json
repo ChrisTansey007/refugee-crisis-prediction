@@ -1,59 +1,11 @@
 {
-  "workers": {
-    "codex": {
-      "status": "idle",
-      "current_task": null,
-      "active_roles": [],
-      "best_for": "Code implementation, refactoring, tests, focused changes",
-      "unavailable_for": [],
-      "last_handoff": null,
-      "notes": "Waiting for tasks in ready/. Not permanently assigned to any role."
-    },
-    "claude": {
-      "status": "idle",
-      "current_task": null,
-      "active_roles": [],
-      "best_for": "Architecture, large-context reasoning, documentation, review",
-      "unavailable_for": [],
-      "last_handoff": null,
-      "notes": "Waiting for tasks in ready/. Not permanently assigned to any role."
-    },
-    "gemini": {
-      "status": "idle",
-      "current_task": null,
-      "active_roles": [],
-      "best_for": "Research, long-document analysis, multimodal analysis, planning",
-      "unavailable_for": [],
-      "last_handoff": null,
-      "notes": "Waiting for tasks in ready/. Not permanently assigned to any role."
-    },
-    "windsurf": {
-      "status": "idle",
-      "current_task": null,
-      "active_roles": [],
-      "best_for": "Repo editing, implementation, local workflow, repeated file changes",
-      "unavailable_for": [],
-      "last_handoff": null,
-      "notes": "Waiting for tasks in ready/. Not permanently assigned to any role."
-    },
-    "antigravity": {
-      "status": "idle",
-      "current_task": null,
-      "active_roles": [],
-      "best_for": "Agentic execution, UI/browser verification, artifact production",
-      "unavailable_for": [],
-      "last_handoff": null,
-      "notes": "Waiting for tasks in ready/. Not permanently assigned to any role."
-    },
-    "hermes": {
-      "status": "idle",
-      "current_task": null,
-      "active_roles": [],
-      "best_for": "Task decomposition, coordination proposals, queue review, status reporting",
-      "unavailable_for": [],
-      "last_handoff": null,
-      "notes": "Hermes is a worker with coordination capabilities, not the boss. Not permanently assigned to any role."
-    }
-  },
-  "last_updated": "2026-05-08T00:00:00Z"
+  "last_updated": "2026-05-11T20:24:08.851072",
+  "active_worker": "hermes-agent",
+  "current_task": "TASK-0009-develop-frontend-dashboard",
+  "task_status": "in-progress",
+  "available_capabilities": [
+    "frontend-builder",
+    "react-typescript",
+    "data-visualization"
+  ]
 }

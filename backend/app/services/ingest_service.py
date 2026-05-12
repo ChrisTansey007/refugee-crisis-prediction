@@ -12,6 +12,8 @@ from app.connectors.worldbank import WorldBankConnector, MIGRATION_INDICATORS
 from app.connectors.acled import ACLEDConnector
 from app.connectors.nasa_power import NASAPowerConnector
 
+from app.services.validation_service import ValidationService
+
 logger = logging.getLogger(__name__)
 
 
@@ -20,6 +22,7 @@ class IngestService:
     
     def __init__(self, db_session: AsyncSession):
         self.db = db_session
+        self.validator = ValidationService()
     
     async def ingest_unhcr_data(
         self,

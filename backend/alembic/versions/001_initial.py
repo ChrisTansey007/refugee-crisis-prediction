@@ -35,7 +35,7 @@ def upgrade() -> None:
         sa.Column('id', sa.Integer(), autoincrement=True, nullable=False),
         sa.Column('name', sa.String(length=255), nullable=False),
         sa.Column('code', sa.String(length=10), nullable=False),
-        sa.Column('geometry', Geometry('MULTIPOLYGON', srid=4326), nullable=True),
+        sa.Column('geometry', sa.Text(), nullable=True),
         sa.PrimaryKeyConstraint('id'),
         sa.UniqueConstraint('code')
     )

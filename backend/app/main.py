@@ -4,7 +4,7 @@ from sqlalchemy import text
 from app.core.config import settings
 from app.core.logging import setup_logging
 from app.core.database import engine
-from app.api import ingest, etl, ml
+from app.api import ingest, etl, ml, system_health, auth
 
 # Set up logging first
 setup_logging()
@@ -23,6 +23,7 @@ app.include_router(ingest.router)
 app.include_router(etl.router)
 app.include_router(ml.router)
 app.include_router(system_health.router)
+app.include_router(auth.router)
 
 # Initialize Prometheus instrumentation
 Instrumentator().instrument(app).expose(app)

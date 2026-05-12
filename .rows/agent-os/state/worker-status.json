@@ -7,5 +7,10 @@
     "frontend-builder",
     "react-typescript",
     "data-visualization"
-  ]
+  ],
+  "hermes": {
+    "current_task": "TASK-0010-implement-authentication",
+    "last_updated": "2026-05-12T02:16:47.308435Z",
+    "status": "active"
+  }
 }

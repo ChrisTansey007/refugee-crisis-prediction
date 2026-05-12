@@ -2,10 +2,10 @@
 import pandas as pd
 from typing import Dict, Any, Optional
 import logging
-from .validation.unhcr_validator import UNHCRValidator
-from .validation.worldbank_validator import WorldBankValidator
-from .validation.acled_validator import ACLEDValidator
-from .validation.nasapower_validator import NASAPOWERValidator
+from ..validation.unhcr_validator import UNHCRValidator
+from ..validation.worldbank_validator import WorldBankValidator
+from ..validation.acled_validator import ACLEDValidator
+from ..validation.nasapower_validator import NASAPOWERValidator
 
 logger = logging.getLogger(__name__)
 

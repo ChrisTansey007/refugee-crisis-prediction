@@ -22,6 +22,7 @@ app = FastAPI(
 app.include_router(ingest.router)
 app.include_router(etl.router)
 app.include_router(ml.router)
+app.include_router(system_health.router)
 
 # Initialize Prometheus instrumentation
 Instrumentator().instrument(app).expose(app)
